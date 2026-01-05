@@ -14,26 +14,10 @@ This system estimates annual energy generation potential based on postcode locat
 - **Learning System**: Gradually improves regional accuracy from user feedback
 - **UK-Focused**: Optimized for UK postcodes and climate patterns
 
-### MVP Scope
-
-**Core Promise**: "Enter your postcode and system type, get a credible annual energy estimate with an explanation you can interrogate."
-
-What we build (MVP):
-- ✅ Postcode to lat/lon conversion
-- ✅ Climate data retrieval (NASA POWER, Global Wind Atlas)
-- ✅ Energy calculations (solar PV and wind turbines)
-- ✅ RAG-based explanations (OpenAI GPT-4o)
-- ✅ User feedback collection for learning
-
-What we don't build (yet):
-- ❌ Real-time weather data ingestion
-- ❌ Custom ML model training
-- ❌ Microclimate modeling
-- ❌ Commercial-scale systems
-
 ## Technology Stack
 
 ### Backend
+
 - **Framework**: FastAPI (Python 3.11+)
 - **Database**: PostgreSQL 15 with pgvector extension
 - **ORM**: SQLAlchemy 2.0 + Alembic migrations
@@ -42,6 +26,7 @@ What we don't build (yet):
 - **External APIs**: Postcodes.io, NASA POWER
 
 ### Frontend (Planned)
+
 - **Framework**: Next.js 14+ with TypeScript
 - **UI**: React 18+ with TailwindCSS
 - **State**: React Query
@@ -109,6 +94,7 @@ uvicorn app.main:app --reload
 ```
 
 API will be available at:
+
 - Root: http://localhost:8000
 - Docs: http://localhost:8000/api/v1/docs
 - Health: http://localhost:8000/health
@@ -116,6 +102,7 @@ API will be available at:
 ## Development Status
 
 ### ✅ Completed
+
 - Project structure and specifications
 - Docker Compose with PostgreSQL + pgvector
 - SQLAlchemy models (calculations, feedback, regional_factors, rag_documents)
@@ -124,6 +111,7 @@ API will be available at:
 - Configuration management
 
 ### 🚧 In Progress
+
 - Solar PV calculator (pvlib)
 - Wind turbine calculator (windpowerlib)
 - API endpoints (`/api/calculate`, `/api/explain`, `/api/feedback`)
@@ -131,6 +119,7 @@ API will be available at:
 - RAG system (OpenAI + pgvector)
 
 ### 📋 Planned
+
 - Pydantic request/response schemas
 - Unit and integration tests
 - Frontend (Next.js)
