@@ -1,0 +1,1 @@
+"""Energy generation calculators."""

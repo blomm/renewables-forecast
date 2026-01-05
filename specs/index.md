@@ -14,6 +14,7 @@ This document lists all specification files for this system.
 - [api_contracts.md](api_contracts.md)
 - [error_handling.md](error_handling.md)
 - [testing_strategy.md](testing_strategy.md)
+- [nasa_power_api.md](nasa_power_api.md) - NASA POWER API detailed breakdown
 
 ## Instructions for Any Model
 
